@@ -1,0 +1,11 @@
+{
+  "name": "swapi-project",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "api:dev": "yarn workspace api start:dev",
+    "web:dev": "yarn workspace web dev"
+  }
+}

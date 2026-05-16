@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "./",
+    },
+    // {
+    //   "name": "Frontend",
+    //   "path": "./apps/frontend"
+    // },
+    {
+      "name": "API",
+      "path": "./apps/api",
+    },
+  ],
+  "settings": {
+    "cSpell.words": ["Swapi"],
+  },
+}

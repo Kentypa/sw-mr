@@ -1,0 +1,14 @@
+FROM node:20-alpine
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+COPY apps/api/package.json ./apps/api/
+COPY apps/api/tsconfig.json ./apps/api/
+COPY apps/api/tsconfig.build.json ./apps/api/
+COPY apps/api/src ./apps/api/src
+
+RUN yarn install --frozen-lockfile
+RUN yarn workspace api add -D tsx   # если ещё не в devDeps
+
+WORKDIR /app/apps/api
+CMD ["yarn", "mig:run"]
